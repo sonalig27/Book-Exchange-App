@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sell Book Form</title>
+    <title>Sell Books Form</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b88e3b9281.js" crossorigin="anonymous"></script>
@@ -10,6 +10,7 @@
 <body>
     <div class="container sell-book">
         <form>
+          <h1 id ="sell-books">Sell Books Form</h1>
                 <div class="form-group">
                   <label for="bookTitle">Book Title :</label>
                   <input type="text" class="form-control" id="bookTitle" placeholder="Book Title">
@@ -52,12 +53,12 @@
                         </div>
                 </div>
 
-                <div class="form-group">
-                        <label for="rentDue" id = "rentDueLabel">Rent Due Date :</label>
+                <div id = "rentDueDate" class="form-group">
+                        <label for="rentDue" >Rent Due Date :</label>
                         <input type="date" class="form-control" id="rentDue" name="rentdue">
             </div>
                 <div id = "rentDepositAmount" class="form-group">
-                        <label for="rentDeposit" id = "rentDepositLabel">Rent Deposit amount :</label>
+                        <label for="rentDeposit">Rent Deposit amount :</label>
                         <div id = "rentDeposit" class="input-group">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">$</span>

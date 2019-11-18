@@ -86,7 +86,7 @@ label{
             padding-left: 10px;
             padding-right: 10px;
             background-color: rgb(209, 206, 206);
-            border-color: rgb(56, 55, 55);
+            border-color: 2px solid rgb(56, 55, 55);
     }
 
 
@@ -134,4 +134,9 @@ input[type=date]::-webkit-outer-spin-button {
 
 #rentDue{
     margin-top: 10px;
+}
+
+#sell-books{
+    text-align: center;
+    border-bottom: 2px solid #9b9b9b;
 }

@@ -48,16 +48,10 @@ function loadPage() {
 
     function yesnoCheck() {
         if (document.getElementById('Sell').checked) {
-             document.getElementById('rentDue').style.display = 'none';
-            // document.getElementById('rentDeposit').style.display = 'none';
-         document.getElementById('rentDueLabel').style.display = 'none';
-            // document.getElementById('rentDepositLabel').style.display = 'none';
             document.getElementById("rentDepositAmount").style.display = 'none';
+            document.getElementById("rentDueDate").style.display = 'none';
         }else {
-             document.getElementById('rentDue').style.display = 'block';
-            // document.getElementById('rentDeposit').style.display = 'block';
-             document.getElementById('rentDueLabel').style.display = 'block';
-            // document.getElementById('rentDepositLabel').style.display = 'block';
             document.getElementById("rentDepositAmount").style.display = 'block';
+            document.getElementById("rentDueDate").style.display = 'block';
         }    
     }
