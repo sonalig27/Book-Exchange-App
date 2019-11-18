@@ -8,7 +8,25 @@
     <script type="text/javascript" src = "login.js"></script>
 </head>
 <body>
-    <div class="container sell-book">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><i class="fas fa-search"></i> Book Search</a>   
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto d-flex align-items-end">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dashboard
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="ISBN.html">Buy Books</a>
+                    <a class="dropdown-item" href="SellBooks.html">Sell Books</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class = "sell-book">
+
         <form>
           <h1 id ="sell-books">Sell Books Form</h1>
                 <div class="form-group">
@@ -74,6 +92,7 @@
                     <button id = "submit" type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
+            </div>
             </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
