@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Exchange Login Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src = "login.js"></script>
+    <style type="text/css">
+        body {
+            background-image: url(books.jpg);
+        }
+        </style>
+    
+</head>
+<body>
+    <div class = "login-page">
+        <div class = "form">
+            <form class = "register-form">
+                <h1>Sign up</h1>
+                <input type="email" placeholder="Enter Email" required onblur="validateEmail(this);"/>
+                <input type="password" placeholder="Password" required/>
+                <button>Sign up</button>
+                <p class = "message">Already Registered? <a href="#">Login</a></p>
+            </form>
+
+            <form class="login-form" action="ISBN.html" onsubmit="return loadPage()">
+                <h1>Login</h1>
+                <input id = "email" type="email" placeholder="Enter Email" />
+                <input id = "password" type="password" placeholder="Password" />
+                <button type="submit">Login</button>
+                <p class = "message">New User? <a href="#">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $('.message a').click(function(){
+            $('form').animate({height: "toggle",opacity:"toggle"},"slow");
+        });
+    </script>
+</body>
+</html>

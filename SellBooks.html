@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sell Book Form</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b88e3b9281.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src = "login.js"></script>
+</head>
+<body>
+    <div class="container sell-book">
+        <form>
+                <div class="form-group">
+                  <label for="bookTitle">Book Title :</label>
+                  <input type="text" class="form-control" id="bookTitle" placeholder="Book Title">
+                </div>
+                <div class="form-group">
+                  <label for="bookImage">Book Image :</label>
+                  <input type="image" id="bookImage" alt="Book Image" src="ISBNbook.jpg">
+                </div>
+                
+                <div class="form-group">
+                        <label for="ISBN-number">Book ISBN :</label>
+                        <input type="number" class="form-control" id="ISBN-number" placeholder="Book ISBN">
+                </div>
+                <div class="form-group">
+                        <label for="bookAuthor">Book Author :</label>
+                        <input type="text" class="form-control" id="bookAuthor" placeholder="Book Author">
+                </div>
+                <div class="form-group">
+                            <label for="bookPublisher">Book Publisher :</label>
+                            <input type="text" class="form-control" id="bookPublisher" placeholder="Book Publisher">
+                </div>
+                <div class="form-group form-check form-check-inline" onclick="javascript:yesnoCheck();">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="Rent" value="Rent" checked>
+                        <label class="form-check-label" for="Rent">Rent</label>
+                    </div>
+                <div class="form-group form-check form-check-inline" onclick="javascript:yesnoCheck();">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="Sell" value="Sell">
+                    <label class="form-check-label" for="Sell">Sell</label>
+                </div>
+                    
+                <div class="form-group">
+                <label for="price">Book Price :</label>
+                <div id = "price" class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <div class="input-group-append">
+                          <span class="input-group-text">.00</span>
+                        </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="rentDue" id = "rentDueLabel">Rent Due Date :</label>
+                        <input type="date" class="form-control" id="rentDue" name="rentdue">
+            </div>
+                <div id = "rentDepositAmount" class="form-group">
+                        <label for="rentDeposit" id = "rentDepositLabel">Rent Deposit amount :</label>
+                        <div id = "rentDeposit" class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">$</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <div class="input-group-append">
+                                  <span class="input-group-text">.00</span>
+                                </div>
+                        </div>
+                        </div>
+        
+                <div class = "form-group">
+                    <button id = "submit" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
