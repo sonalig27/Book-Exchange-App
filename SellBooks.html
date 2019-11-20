@@ -2,40 +2,41 @@
 <html lang="en">
 <head>
     <title>Sell Books Form</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <script src="https://kit.fontawesome.com/b88e3b9281.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src = "login.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><i class="fas fa-search"></i> Book Search</a>   
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto d-flex align-items-end">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dashboard
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="ISBN.html">Buy Books</a>
-                    <a class="dropdown-item" href="SellBooks.html">Sell Books</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <div class = "sell-book">
-
-        <form>
-          <h1 id ="sell-books">Sell Books Form</h1>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+        <a class="navbar-brand" href="#"><i class="fas fa-search"></i> Book Search</a>   
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto d-flex align-items-end">
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dashboard
+              </a>
+              <div id = "dropdown" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="ISBN.html">Buy Books</a>
+                <a class="dropdown-item" href="SellBooks.html">Sell Books</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </nav>
+    <div class="container sell-book">
+         <form id = "sellbooksform">
+          <h1 id ="sell-books-heading">Sell Books Form</h1>
                 <div class="form-group">
                   <label for="bookTitle">Book Title :</label>
                   <input type="text" class="form-control" id="bookTitle" placeholder="Book Title">
                 </div>
                 <div class="form-group">
                   <label for="bookImage">Book Image :</label>
-                  <input type="image" id="bookImage" alt="Book Image" src="ISBNbook.jpg">
+                  <input type="image" id="bookImage" alt="Book Image" src="#">
                 </div>
                 
                 <div class="form-group">

@@ -43,13 +43,31 @@ function yesnoCheck() {
   }
 }
 
+function validate(evt) {
+  var theEvent = evt || window.event;
+
+  // Handle paste
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
 $(document).ready(function(){
   $("#search-submit").click(function() {
+    $('#result').html('');
   var search = $("#book").val();
-  
-  if (search == '')
+  document.getElementById('book').value = '';
+  if (search == '' || search.length < 10 || search.length == 11 || search.length == 12)
   {
-   alert("Please enter something in this field");
+   alert("Please enter a valid ISBN number, it is either 10 digit or 13 digit");
   }
   else{
   var url = '';
@@ -59,13 +77,13 @@ $(document).ready(function(){
   var publisher = '';
   
   $.get("https://www.googleapis.com/books/v1/volumes?q="+ search, function(data){
-    title=$('<h5 class="form-group">Book Title: '+ data.items[0].volumeInfo.title + '</h5>');
+    title=$('<h6 class="form-group">Book Title: '+ data.items[0].volumeInfo.title + '</h6>');
   
-   author=$('<h5 class="form-group">Book Author: '+ data.items[0].volumeInfo.authors + '</h5>');
+   author=$('<h6 class="form-group">Book Author: '+ data.items[0].volumeInfo.authors + '</h6>');
 
-   publisher=$('<h5 class="form-group">Book Publisher: '+ data.items[0].volumeInfo.publisher + '</h5>');
+   publisher=$('<h6 class="form-group">Book Publisher: '+ data.items[0].volumeInfo.publisher + '</h6>');
   
-   img=$('<img class="form-group card z-depth-5" id = "dynamic"><br><a href =' + data.items[0].volumeInfo.infoLink + '><button id= "readmore" type="button" class="btn btn-primary mb-2 form-group">Read More </button></a>');
+   img=$('<img class="form-group card z-depth-5" id = "dynamic"><br><a href =' + data.items[0].volumeInfo.infoLink + '><button id= "readmore" type="button" class="btn btn-primary mb-2 form-group">Read More </button></a><button id= "request" type="button" class="btn btn-primary mb-2 form-group">Request Book </button>');
 
    url= data.items[0].volumeInfo.imageLinks.thumbnail;
   
@@ -74,7 +92,6 @@ $(document).ready(function(){
   author.appendTo("#result");
   publisher.appendTo("#result");
   img.appendTo("#result");
-
 });
   }
   });
