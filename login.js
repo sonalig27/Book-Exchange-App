@@ -65,7 +65,7 @@ $(document).ready(function(){
 
    publisher=$('<h5 class="form-group">Book Publisher: '+ data.items[0].volumeInfo.publisher + '</h5>');
   
-   img=$('<img class="form-group card z-depth-5" id = "dynamic"><br><a href =' + data.items[0].volumeInfo.infoLink + '><button id= "imagebutton" class="btn red form-group">Read More </button></a>');
+   img=$('<img class="form-group card z-depth-5" id = "dynamic"><br><a href =' + data.items[0].volumeInfo.infoLink + '><button id= "readmore" type="button" class="btn btn-primary mb-2 form-group">Read More </button></a>');
 
    url= data.items[0].volumeInfo.imageLinks.thumbnail;
   
