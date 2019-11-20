@@ -68,7 +68,7 @@ label{
 	width: 900px;
 	top:20%;
 	left:30%;
-	margin-top: -50px;
+    margin-top: -50px;
 	margin-left: -50px;
 	padding: 20px;
 }
@@ -139,4 +139,9 @@ input[type=date]::-webkit-outer-spin-button {
 #sell-books{
     text-align: center;
     border-bottom: 2px solid #9b9b9b;
+}
+
+#result{
+    margin-top: 15%;
+    margin-left: 30%;
 }
